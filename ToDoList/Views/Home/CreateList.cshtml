@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Create";
+}
+
+@model ToDoList.Models.List
+
+<div class="text-center">
+    <h1 class="display-4">Create Or Edit List</h1>
+</div>
+
+<form asp-controller="Home" asp-action="AfterCreateList">
+    <label hidden>Id</label>
+    <input hidden class="form-control mt-2" type="number" asp-for="Id"/>
+    <label class="mt-3">Price</label>
+    <input class="form-control mt-2" type="number" asp-for="Price" />
+    <label class="mt-3">Description</label>
+    <input class="form-control mt-2" type="text" asp-for="Description" />
+
+    <button class="btn btn-success mt-3" type="submit">Create</button>
+
+</form>
